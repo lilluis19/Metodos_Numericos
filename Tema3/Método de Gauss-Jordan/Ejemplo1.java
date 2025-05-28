@@ -1,43 +1,62 @@
 public class Ejercicio1 {
     public static void main(String[] args) {
-        double[][] A = {
-            {1, 2, 1},
-            {1, 0, 1},
-            {0, 1, 2}
+        double[][] matrix = {
+            {3, 2, 1, 1},
+            {5, 3, 4, 2},
+            {1, 1, -1, 1}
         };
-        double[] b = {0, 2, 1};
 
-        double[] xyz = gaussElimination(A, b);
-        System.out.println("Solución del sistema de ecuaciones:");
-        System.out.println("x = " + xyz[0]);
-        System.out.println("y = " + xyz[1]);
-        System.out.println("z = " + xyz[2]);
+        gaussJordan(matrix);
+        imprimirResultado(matrix);
     }
 
-    public static double[] gaussElimination(double[][] A, double[] b) {
-        int n = A.length;
+    public static void gaussJordan(double[][] matrix) {
+        int rows = matrix.length;
+        int cols = matrix[0].length;
 
-        // Eliminación hacia adelante
-        for (int k = 0; k < n - 1; k++) {
-            for (int i = k + 1; i < n; i++) {
-                double factor = A[i][k] / A[k][k];
-                for (int j = k; j < n; j++) {
-                    A[i][j] -= factor * A[k][j];
+        for (int k = 0; k < rows; k++) {
+            int maxRow = k;
+            for (int i = k + 1; i < rows; i++) {
+                if (Math.abs(matrix[i][k]) > Math.abs(matrix[maxRow][k])) {
+                    maxRow = i;
                 }
-                b[i] -= factor * b[k];
+            }
+            double[] temp = matrix[k];
+            matrix[k] = matrix[maxRow];
+            matrix[maxRow] = temp;
+
+            for (int i = 0; i < rows; i++) {
+                if (i != k) {
+                    double factor = matrix[i][k] / matrix[k][k];
+                    for (int j = k; j < cols; j++) {
+                        matrix[i][j] -= factor * matrix[k][j];
+                    }
+                }
+            }
+
+            double divisor = matrix[k][k];
+            for (int j = k; j < cols; j++) {
+                matrix[k][j] /= divisor;
             }
         }
+    }
 
-        // Sustitución hacia atrás
-        double[] x = new double[n];
-        for (int i = n - 1; i >= 0; i--) {
-            double sum = 0;
-            for (int j = i + 1; j < n; j++) {
-                sum += A[i][j] * x[j];
+    public static void imprimirResultado(double[][] matrix) {
+        System.out.println("La matriz en su forma escalonada reducida por filas es:");
+        for (double[] row : matrix) {
+            for (double value : row) {
+                if (Math.abs(value - (int)value) < 1e-6) {
+                    System.out.print((int)value + "\t");
+                } else {
+                    System.out.print(value + "\t");
+                }
             }
-            x[i] = (b[i] - sum) / A[i][i];
+            System.out.println();
         }
 
-        return x;
+        System.out.println("Solución del sistema de ecuaciones:");
+        System.out.println("x = " + matrix[0][3]);
+        System.out.println("y = " + matrix[1][3]);
+        System.out.println("z = " + matrix[2][3]);
     }
 }
