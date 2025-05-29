@@ -1,0 +1,88 @@
+ Eliminación Gaussiana
+Concepto General
+La eliminación gaussiana es un método directo para resolver sistemas de ecuaciones lineales. Su enfoque principal consiste en transformar el sistema original en otro más sencillo, que se pueda resolver de forma progresiva mediante sustitución hacia atrás.
+
+Proceso General
+El sistema se convierte en una forma triangular superior, es decir, donde todos los coeficientes por debajo de la diagonal principal son cero. Esta transformación se logra aplicando operaciones elementales a las filas del sistema: intercambios de filas, multiplicación de una fila por un número distinto de cero, y suma o resta de filas.
+
+Ventajas
+Es un método determinista y siempre ofrece una solución (si existe).
+
+Funciona bien con sistemas pequeños o medianos.
+
+Su implementación computacional es sencilla.
+
+Desventajas
+Requiere un gran número de operaciones para sistemas grandes.
+
+Puede presentar problemas numéricos (como inestabilidad) si no se aplica pivoteo.
+
+No es eficiente para matrices dispersas o de gran tamaño.
+
+Método de Gauss-Jordan
+Concepto General
+El método de Gauss-Jordan es una extensión de la eliminación gaussiana. En lugar de reducir el sistema a una forma triangular superior, lo reduce completamente a la forma escalonada reducida, también conocida como matriz identidad en la parte de los coeficientes. Esto significa que cada variable puede leerse directamente de la matriz final, sin necesidad de sustitución.
+
+Proceso General
+Además de eliminar los coeficientes por debajo de la diagonal, este método también elimina los coeficientes por encima de la diagonal. El resultado es una matriz en la que todos los elementos fuera de la diagonal principal son cero, y los elementos de la diagonal son unos.
+
+Ventajas
+El sistema se resuelve directamente sin sustitución hacia atrás.
+
+Es útil para resolver varios sistemas con la misma matriz de coeficientes.
+
+Permite calcular la inversa de una matriz si se aplica sobre una matriz aumentada.
+
+Desventajas
+Requiere más operaciones que la eliminación gaussiana tradicional.
+
+Puede ser computacionalmente más costoso.
+
+Al igual que Gauss, puede ser ineficiente en sistemas muy grandes sin optimización.
+
+ Método de Gauss-Seidel
+Concepto General
+El método de Gauss-Seidel es un algoritmo iterativo que se utiliza para resolver sistemas lineales de forma aproximada. Este método actualiza cada valor de variable en tiempo real, utilizando los valores más recientes que se van generando dentro de la misma iteración.
+
+Proceso General
+A diferencia de los métodos directos, no transforma el sistema en otra forma. En cambio, parte de una estimación inicial de las variables, y la mejora iterativamente hasta que se alcanza una precisión deseada.
+
+Ventajas
+Es más eficiente que los métodos directos para matrices grandes y dispersas.
+
+Utiliza menos memoria y puede manejar sistemas que serían complicados para otros métodos.
+
+Rápido si el sistema cumple ciertas condiciones de convergencia (como diagonal dominante).
+
+Desventajas
+No siempre converge. Depende de las características de la matriz.
+
+Requiere buenas condiciones numéricas para garantizar la estabilidad.
+
+Puede ser lento si el sistema no está bien condicionado.
+
+Método de Jacobi
+Concepto General
+El método de Jacobi es otro algoritmo iterativo para resolver sistemas lineales. Su diferencia clave respecto a Gauss-Seidel es que no actualiza los valores en tiempo real durante cada iteración: todos los valores de la siguiente iteración se calculan a partir de los valores anteriores sin modificarlos hasta que la iteración ha terminado.
+
+Proceso General
+Como Gauss-Seidel, Jacobi requiere una estimación inicial y luego la mejora gradualmente. Calcula cada variable por separado, basándose únicamente en los valores de la iteración anterior.
+
+Ventajas
+Es fácil de implementar y comprender.
+
+Se puede paralelizar fácilmente, lo que lo hace útil en programación concurrente.
+
+Puede funcionar bien si se cumplen las condiciones de convergencia.
+
+Desventajas
+Generalmente converge más lento que Gauss-Seidel.
+
+También requiere una matriz bien condicionada para garantizar buenos resultados.
+
+Puede ser sensible a errores de redondeo en ciertos casos.
+
+
+Conclusión Final
+Estos cuatro métodos son fundamentales en la formación de un ingeniero en sistemas computacionales. Los métodos directos, como Gauss y Gauss-Jordan, son apropiados cuando se necesita una solución exacta y el tamaño del sistema lo permite. En cambio, los métodos iterativos como Jacobi y Gauss-Seidel son más adecuados para sistemas de gran tamaño o cuando se busca una solución aproximada eficiente. Dominar estos métodos no solo permite resolver sistemas de ecuaciones, sino que también sienta las bases para técnicas más avanzadas en álgebra lineal numérica y análisis de datos en ingeniería.
+
