@@ -1,0 +1,37 @@
+Interpolación Lineal
+La interpolación lineal es el método más sencillo y directo dentro de las técnicas de interpolación numérica. Su objetivo es estimar el valor de una función entre dos puntos conocidos utilizando una línea recta. Básicamente, se asume que el cambio entre los valores de una variable dependiente ocurre de manera uniforme entre dos valores de la variable independiente.
+
+Este método no intenta construir un modelo complejo de la función original, sino simplemente conectar cada par de puntos sucesivos con segmentos de recta. La simplicidad de este enfoque permite una implementación rápida y eficiente, ideal para sistemas donde se requiere una solución inmediata con un nivel básico de precisión.
+
+La interpolación lineal es especialmente útil en casos donde la función real es aproximadamente lineal entre los puntos dados, o cuando la precisión no es crítica. Sin embargo, su principal limitación es su baja precisión en casos donde la función tiene un comportamiento curvo entre los puntos. En esas situaciones, este método puede producir errores notables.
+
+En ingeniería y computación, la interpolación lineal se emplea con frecuencia en gráficas, visualización de datos, procesamiento de señales, simulaciones básicas y sistemas embebidos, donde se valora más la rapidez de cálculo que la exactitud extrema.
+
+Interpolación por Mínimos Cuadrados (Ajuste de Mínimos Cuadrados)
+El método de mínimos cuadrados no es estrictamente un método de interpolación, sino un método de ajuste. Su objetivo no es encontrar una función que pase por todos los puntos, sino una que se aproxime a ellos de la mejor manera posible, en un sentido estadístico. Esto se logra minimizando la suma de los cuadrados de las diferencias (errores) entre los valores observados y los valores estimados por la función ajustada.
+
+Esta técnica es ampliamente usada en regresión lineal y no lineal, siendo una herramienta central en estadística, análisis de datos y aprendizaje automático. Es muy útil cuando los datos provienen de observaciones experimentales que contienen ruido o variaciones aleatorias, y donde se busca obtener una tendencia general del comportamiento.
+
+Existen diferentes variantes del método de mínimos cuadrados, dependiendo de si se ajusta una línea recta (ajuste lineal), una parábola, un polinomio de orden superior, o incluso funciones exponenciales o logarítmicas. La elección del modelo depende de la naturaleza de los datos y del comportamiento que se desea modelar.
+
+En ingeniería en sistemas, el método de mínimos cuadrados se aplica en análisis de rendimiento, modelado de datos experimentales, predicción, y como base para algoritmos de optimización y aprendizaje automático.
+
+Interpolación de Lagrange
+La interpolación de Lagrange es un método clásico que permite encontrar un polinomio que pasa exactamente por un conjunto de puntos dados. Se basa en construir una combinación lineal de funciones básicas (los polinomios de Lagrange) que garantizan que el polinomio interpolante tome exactamente los valores de la función original en los puntos conocidos.
+
+Una de las ventajas principales de este método es que no requiere resolver sistemas de ecuaciones lineales ni calcular diferencias divididas, lo que lo hace relativamente fácil de implementar. Esto lo convierte en una herramienta popular para la enseñanza y para cálculos donde se necesita una solución puntual rápida.
+
+Sin embargo, presenta limitaciones importantes: cuando se usan muchos puntos, el polinomio resultante puede volverse muy oscilante, especialmente en los extremos del intervalo (fenómeno de Runge). Esto genera errores significativos, lo que hace que el método sea inadecuado para grandes cantidades de datos o para funciones con cambios abruptos.
+
+A pesar de estas limitaciones, la interpolación de Lagrange tiene aplicaciones en gráficos por computadora, sistemas de control, procesamiento de señales, y en el desarrollo de algoritmos de interpolación más avanzados. Es también una base teórica importante en análisis numérico.
+
+Interpolación de Newton
+La interpolación de Newton es otro método que construye un polinomio que pasa exactamente por los puntos dados, pero lo hace utilizando un enfoque basado en diferencias divididas. Esto ofrece varias ventajas prácticas frente al método de Lagrange.
+
+En lugar de construir el polinomio de una sola vez como en Lagrange, Newton lo hace progresivamente, lo cual tiene importantes implicaciones computacionales. La principal ventaja de esta estructura incremental es que permite agregar nuevos puntos sin tener que recalcular todo desde cero, lo que resulta extremadamente útil cuando se trabaja con conjuntos de datos que cambian dinámicamente o que se van ampliando con el tiempo.
+
+Otra ventaja es que es más estable y eficiente en términos de operaciones matemáticas cuando se implementa en algoritmos computacionales. Las diferencias divididas también proporcionan un mecanismo más ordenado para calcular los coeficientes del polinomio, lo que reduce errores numéricos en muchas aplicaciones.
+
+Este método es ampliamente utilizado en programas de software de cálculo numérico, hojas de cálculo avanzadas, y sistemas de simulación y modelado en ingeniería. Además, es una herramienta clave en muchos paquetes de software matemático por su precisión y flexibilidad.
+
+Estos métodos son pilares dentro del análisis numérico, modelado matemático, y programación científica. Cada uno tiene ventajas particulares que los hacen adecuados para distintos tipos de problemas en ingeniería en sistemas, ya sea para visualizar datos, estimar resultados, construir modelos predictivos o resolver ecuaciones de manera aproximada.
