@@ -1,0 +1,45 @@
+Método de Euler
+El método de Euler es la forma más sencilla y básica para aproximar la solución de una ecuación diferencial. Se basa en la idea de avanzar poco a poco desde un punto inicial conocido, usando la pendiente o tasa de cambio que la ecuación nos indica en ese punto para estimar el valor en el siguiente.
+
+Imagina que tienes una curva que quieres seguir, pero solo sabes la inclinación en un punto. Lo que hace Euler es usar esa inclinación para dar un pequeño paso hacia adelante en línea recta, asumiendo que la pendiente no cambia mucho en ese tramo pequeño. Así, va construyendo la solución punto a punto.
+
+Es muy fácil de entender e implementar, por lo que es ideal para quienes se están iniciando en métodos numéricos o para problemas donde la precisión no es crítica.
+
+Sin embargo, tiene algunas limitaciones importantes. La precisión depende mucho del tamaño del paso que tomes. Si decides avanzar en saltos muy grandes, la aproximación puede desviarse mucho de la solución real. Además, si la función cambia rápidamente o tiene curvas pronunciadas, la aproximación puede ser muy pobre y acumular errores rápidamente. Por esta razón, no es recomendable usarlo para problemas complejos o cuando se necesita una solución muy precisa.
+
+En resumen, el método de Euler es rápido, simple, pero puede ser impreciso y propenso a errores, especialmente en intervalos largos o con funciones complicadas.
+
+Método de Runge-Kutta
+Para superar las limitaciones de Euler, existen los métodos de Runge-Kutta, que forman una familia de técnicas mucho más precisas y robustas para resolver ecuaciones diferenciales.
+
+El más popular y utilizado es el método de cuarto orden, conocido como RK4. A diferencia de Euler, que solo usa la pendiente en el inicio del paso, RK4 evalúa la pendiente en varios puntos intermedios dentro de cada pequeño intervalo. Con esta información, combina esas pendientes para obtener una aproximación mucho más fiel a cómo cambia realmente la solución.
+
+Esto hace que RK4 sea notablemente más preciso que Euler, incluso usando pasos de tamaño moderado, sin necesidad de hacerlos extremadamente pequeños para mantener la precisión. Por eso, es el método estándar en muchas áreas científicas e ingenieriles donde se resuelven ecuaciones diferenciales numéricamente.
+
+El costo es que RK4 requiere calcular varias veces la función en cada paso, lo que implica más cálculos y tiempo computacional. Pero, para la mayoría de aplicaciones, el balance entre precisión y eficiencia es excelente.
+
+Además, RK4 es bastante estable y puede manejar una amplia variedad de problemas con diferentes comportamientos, lo que lo hace muy versátil.
+
+En resumen, Runge-Kutta cuarto orden ofrece una solución muy precisa y confiable para problemas numéricos, superando ampliamente las limitaciones del método de Euler, aunque con un costo computacional un poco mayor.
+
+Método de Taylor
+El método de Taylor se basa en una idea matemática profunda: usar la serie de Taylor para aproximar la solución alrededor de un punto conocido.
+
+En lugar de solo usar la pendiente (primera derivada), el método utiliza también derivadas de orden superior para construir una aproximación mucho más precisa y detallada. Esto se traduce en una fórmula que considera la curvatura, la tasa de cambio de la pendiente y otros aspectos más finos del comportamiento de la solución.
+
+Si puedes calcular fácilmente estas derivadas de orden superior, el método de Taylor puede ofrecer aproximaciones muy precisas, incluso con pasos grandes. Es ideal para casos donde las derivadas de la función son fáciles de obtener y manejar.
+
+Sin embargo, en la práctica, calcular estas derivadas de orden superior suele ser muy complicado o incluso imposible para muchas ecuaciones. Por ello, este método es menos usado directamente para resolver problemas prácticos, pero tiene un gran valor teórico para entender la base matemática detrás de las soluciones aproximadas.
+
+También es la base conceptual para otros métodos numéricos más complejos y avanzados.
+
+En resumen, el método de Taylor es poderoso y preciso si se pueden calcular muchas derivadas, pero su uso real está limitado debido a la dificultad para obtener esas derivadas, por lo que es más común verlo como un fundamento teórico o en casos muy particulares.
+
+Resumen final
+Euler: método simple, fácil y rápido, pero poco preciso y propenso a errores si no se usan pasos pequeños.
+
+Runge-Kutta (RK4): método estándar, mucho más preciso, combina varias evaluaciones por paso para obtener resultados fiables y estables; es un balance muy bueno entre precisión y costo computacional.
+
+Taylor: método teóricamente muy preciso, usa derivadas de orden superior para aproximar mejor la solución, pero su uso práctico es limitado por la dificultad de calcular esas derivadas.
+
+Cada método tiene su lugar según la necesidad de precisión, la facilidad para calcular derivadas, la complejidad del problema y los recursos computacionales disponibles.
