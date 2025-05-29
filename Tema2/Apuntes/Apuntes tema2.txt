@@ -1,0 +1,97 @@
+MÉTODO DE NEWTON-RHAPSON
+Concepto general
+El método de Newton-Raphson es uno de los métodos numéricos más conocidos y potentes para encontrar raíces de ecuaciones no lineales. Su principio se basa en aproximar una función compleja por una línea recta, utilizando información de la pendiente (es decir, de la derivada). Se trata de un proceso iterativo que parte de una suposición inicial y mejora esa suposición en cada paso, acercándose progresivamente a la raíz verdadera.
+
+Características clave
+Este método destaca por su rapidez cuando la suposición inicial está suficientemente cerca de la raíz real. A medida que se ejecutan más iteraciones, el valor calculado se aproxima con mayor precisión. Esta velocidad de convergencia se conoce como convergencia cuadrática.
+
+Ventajas
+Es extremadamente eficiente en términos de número de iteraciones necesarias para alcanzar una alta precisión.
+
+Cuando se parte de una buena estimación inicial, las mejoras en la precisión ocurren muy rápidamente.
+
+Es ideal para funciones suaves y bien comportadas, especialmente cuando se dispone de la expresión de la derivada.
+
+Desventajas
+Requiere el conocimiento y cálculo de la derivada de la función, lo que puede no ser viable en todos los casos.
+
+Puede fallar o desviarse si la suposición inicial está lejos de la raíz.
+
+Si en algún paso la derivada se aproxima a cero, el método se vuelve inestable y puede no funcionar correctamente.
+
+No garantiza la convergencia en todos los casos.
+
+MÉTODO DE LA SECANTE
+Concepto general
+El método de la secante es una alternativa al método de Newton-Raphson que evita el uso de derivadas. En lugar de calcular una pendiente exacta como lo hace Newton, utiliza una pendiente aproximada obtenida a partir de dos puntos distintos. Esta recta secante se utiliza para proyectar una nueva aproximación de la raíz.
+
+Características clave
+Este método también es iterativo y se basa en mejorar sucesivamente las estimaciones de la raíz. A diferencia de Newton-Raphson, se requieren dos puntos iniciales en lugar de uno. La falta de necesidad de derivadas hace que sea más práctico en algunos contextos, aunque puede necesitar más iteraciones.
+
+Ventajas
+No necesita derivadas, lo que lo hace aplicable a funciones más generales.
+
+Requiere menos información analítica sobre la función.
+
+Es generalmente más rápido que los métodos de intervalo como bisección o falsa posición.
+
+Desventajas
+Requiere dos puntos iniciales, lo cual puede ser una limitación si no se conoce bien el comportamiento de la función.
+
+Puede fallar o alejarse de la raíz si los puntos elegidos no son adecuados.
+
+Tiene una convergencia más lenta que Newton-Raphson y menos estabilidad que los métodos basados en intervalos.
+
+MÉTODO DE BISECCIÓN
+Concepto general
+El método de bisección es uno de los métodos más sencillos y robustos para encontrar raíces. Su funcionamiento se basa en el principio del cambio de signo: si una función continua cambia de signo entre dos puntos, entonces debe haber al menos una raíz entre ellos. El método consiste en dividir repetidamente el intervalo en mitades, seleccionando siempre el subintervalo donde ocurre el cambio de signo.
+
+Características clave
+Este método garantiza la convergencia siempre que la función cumpla con la condición de cambio de signo. A medida que se divide el intervalo, se va reduciendo el espacio donde puede encontrarse la raíz, hasta que se alcanza un nivel aceptable de precisión.
+
+Ventajas
+Es muy confiable y garantiza encontrar una raíz si la función es continua y cambia de signo en el intervalo.
+
+No requiere derivadas ni cálculos complicados.
+
+Su implementación es simple y clara, lo que lo hace ideal como introducción a los métodos numéricos.
+
+Desventajas
+Su velocidad de convergencia es baja comparada con otros métodos.
+
+Solo puede encontrar una raíz dentro de un intervalo definido, y no todas las funciones cumplen la condición de cambio de signo.
+
+No proporciona una aproximación refinada de la raíz con pocas iteraciones, lo que puede ser costoso computacionalmente en problemas grandes.
+
+MÉTODO DE FALSA POSICIÓN (REGLA FALSA)
+Concepto general
+El método de falsa posición es similar al de bisección, ya que también parte de un intervalo donde la función cambia de signo. Sin embargo, en lugar de simplemente dividir el intervalo por la mitad, realiza una estimación más informada utilizando una línea recta que une los extremos del intervalo. Se espera que esta línea recta cruce el eje más cerca de la raíz real, lo que permite obtener una mejor aproximación en cada paso.
+
+Características clave
+Este método combina la fiabilidad del criterio de cambio de signo del método de bisección con la eficiencia de una estimación basada en el comportamiento de la función. Se considera un método intermedio entre la precisión segura de bisección y la velocidad de la secante.
+
+Ventajas
+Tiene mejor rendimiento que el método de bisección en muchos casos.
+
+Conserva la garantía de convergencia cuando se cumple la condición de cambio de signo.
+
+No necesita derivadas, lo cual lo hace fácil de aplicar en funciones complejas.
+
+Desventajas
+Puede volverse ineficiente si uno de los extremos del intervalo no se actualiza durante muchas iteraciones.
+
+Aunque mejora la velocidad con respecto al método de bisección, sigue siendo más lento que Newton-Raphson o la secante en términos generales.
+
+Puede requerir ajustes o condiciones adicionales para mejorar su rendimiento en ciertas funciones.
+
+COMPARACIÓN GENERAL DE LOS MÉTODOS
+El método de Newton-Raphson es el más rápido en la mayoría de los casos, pero depende de la disponibilidad de derivadas y de una buena estimación inicial.
+
+El método de la secante ofrece un compromiso entre rapidez y simplicidad, evitando el uso de derivadas pero manteniendo un ritmo razonable de convergencia.
+
+El método de bisección es el más robusto y fácil de entender, ideal para obtener raíces cuando no se tiene mucha información sobre la función.
+
+El método de falsa posición intenta acelerar el proceso de bisección usando estimaciones más inteligentes, aunque puede requerir refinamientos para mejorar su desempeño en casos específicos.
+
+CONCLUSIÓN FINAL
+Cada uno de estos métodos tiene su propia utilidad dependiendo del tipo de función, los recursos disponibles y los requisitos del problema a resolver. En contextos de ingeniería, donde las funciones pueden ser complejas o costosas de evaluar, es fundamental elegir el método adecuado. Mientras algunos priorizan la rapidez, otros priorizan la estabilidad y la certeza de encontrar la raíz. Por eso, el dominio de estos métodos es esencial para cualquier estudiante o profesional de ingeniería en sistemas computacionales, ya que aparecen con frecuencia en análisis de sistemas, simulación, optimización y modelado computacional.
