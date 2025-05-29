@@ -1,0 +1,18 @@
+
+Cancelación Numérica
+Es un fenómeno que ocurre cuando se restan dos números muy cercanos entre sí, lo que puede provocar una pérdida significativa de precisión. Esta pérdida se debe a que los dígitos más significativos se anulan, dejando solo los menos significativos, lo cual puede amplificar errores en cálculos posteriores.
+
+Error Absoluto
+Es la diferencia entre el valor real y el valor aproximado. Representa la cantidad exacta de error sin considerar la magnitud del valor real. Es una medida directa del tamaño del error cometido.
+
+Error de Redondeo
+Es el error que se genera al limitar el número de cifras decimales utilizadas para representar un número. Surge por la imposibilidad de representar ciertos números con precisión finita en la computadora. Este error puede acumularse a lo largo de múltiples operaciones.
+
+Error de Truncamiento
+Es el error que se produce al utilizar una aproximación matemática en lugar de una expresión exacta, como ocurre al cortar una serie infinita o al usar una fórmula aproximada. Se debe a la simplificación del modelo matemático utilizado.
+
+Error Total
+Es la combinación de todos los errores presentes en un cálculo, incluyendo tanto el error de truncamiento como el error de redondeo. Representa la diferencia entre el valor exacto y el valor calculado por el método numérico.
+
+Error Relativo
+Es el cociente entre el error absoluto y el valor real. Proporciona una medida del error en relación con el tamaño del valor verdadero, lo cual permite comparar errores de diferentes magnitudes de manera más significativa.
