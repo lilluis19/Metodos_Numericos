@@ -1,0 +1,38 @@
+Método del Trapecio
+El método del trapecio es una de las técnicas más básicas y fundamentales en la integración numérica. Su idea principal es dividir el intervalo sobre el cual se desea calcular la integral de una función en varios subintervalos, y sobre cada uno de esos subintervalos se aproxima la función mediante una línea recta. Es decir, se considera que la función se comporta de manera lineal entre dos puntos consecutivos. Esto genera una figura en forma de trapecio cuya área es mucho más fácil de calcular que la de la curva original.
+
+Este método tiene la ventaja de ser muy intuitivo y fácil de implementar computacionalmente. Si bien no es el más preciso en comparación con otros métodos más avanzados, ofrece buenos resultados cuando se trabaja con funciones suaves (es decir, que no cambian abruptamente su comportamiento) y cuando se incrementa el número de subintervalos. Es ampliamente utilizado como introducción a técnicas de integración por su simplicidad conceptual y operativa.
+
+Una de las limitaciones del método del trapecio es que si la función presenta curvaturas acentuadas, la aproximación lineal puede ser deficiente, generando errores considerables. Aun así, se puede mejorar la precisión del método aumentando el número de subdivisiones (usando la versión compuesta del método del trapecio), aunque eso también implica mayor costo computacional.
+
+El método también es apreciado en contextos donde se requiere rapidez de cálculo y donde la exactitud puede tolerar un margen de error, como en análisis preliminares, simulaciones o situaciones donde se evalúa el comportamiento general de una función.
+
+Método de Cuadratura Gaussiana
+El método de cuadratura gaussiana representa una familia de técnicas numéricas que buscan integrar funciones con un altísimo grado de precisión, incluso utilizando pocos puntos. A diferencia de métodos como el del trapecio o Simpson, la cuadratura gaussiana no requiere que los puntos de evaluación estén equidistantes. En cambio, selecciona de forma óptima tanto los puntos de evaluación (nodos) como los pesos asociados a cada nodo para maximizar la precisión.
+
+Este método está basado en la teoría de los polinomios ortogonales, como los de Legendre, Hermite o Chebyshev, dependiendo del tipo de cuadratura. Lo más destacado de la cuadratura gaussiana es que, al optimizar la selección de nodos y pesos, puede integrar exactamente polinomios de grado mucho mayor que los métodos clásicos, lo cual lo convierte en una herramienta muy potente cuando se desea minimizar el número de evaluaciones de la función.
+
+Es ideal para aplicaciones en las que se requiere una gran precisión en el cálculo de integrales definidas, como en problemas de física computacional, análisis estructural, dinámica de fluidos y simulaciones científicas donde los errores acumulados pueden comprometer la validez de los resultados.
+
+A pesar de su potencia, requiere algo más de complejidad teórica y computacional para su implementación, por lo que a menudo se emplea en etapas posteriores del aprendizaje de integración numérica. No obstante, su rendimiento compensa con creces esta complejidad en muchos contextos de ingeniería y ciencias aplicadas.
+
+Método de Simpson 1/3
+Este método es una evolución del método del trapecio. En lugar de aproximar la curva de la función por líneas rectas, utiliza parábolas, lo cual le da una mayor capacidad para capturar la curvatura de la función. Su nombre proviene de la fracción 1/3 que aparece en la constante del método, pero más allá del detalle técnico, lo importante es que utiliza polinomios de segundo grado para hacer la aproximación.
+
+El método de Simpson 1/3 es más preciso que el del trapecio cuando se usa sobre funciones suaves, y se vuelve aún más poderoso cuando se aplica de manera compuesta, es decir, cuando se divide el intervalo de integración en múltiples subintervalos y se aplica el método a cada uno de ellos.
+
+Una condición necesaria para aplicar correctamente el método es que el número de subintervalos sea par, lo cual a veces puede limitar su aplicación directa en ciertos casos. Sin embargo, cuando se cumplen las condiciones adecuadas, proporciona una excelente combinación entre precisión y facilidad de implementación.
+
+En ingeniería y computación, este método es utilizado para cálculos numéricos donde se desea mantener el error dentro de márgenes aceptables sin recurrir a métodos excesivamente complejos. Además, su implementación algorítmica es muy eficiente, lo que lo hace apto para programas y simulaciones que requieren integración numérica como parte de su procesamiento interno.
+
+Método de Simpson 3/8
+El método de Simpson 3/8 es una variante del Simpson 1/3, diseñada para situaciones en las que el número de subintervalos no se adapta al requisito de ser par. A diferencia de Simpson 1/3, este método utiliza polinomios cúbicos (de grado 3) para aproximar la función. Su nombre proviene de la fracción 3/8 involucrada en su fórmula.
+
+La principal ventaja de esta variante es su flexibilidad. Puede utilizarse para completar la aproximación en los casos donde el número de subintervalos no permite aplicar exclusivamente el método 1/3. En este sentido, es común ver ambos métodos combinados en una misma implementación, dependiendo de las necesidades del problema.
+
+El método de Simpson 3/8 ofrece buena precisión, especialmente en funciones suaves, aunque puede ser un poco menos eficiente que el 1/3 en términos del número de operaciones necesarias para obtener una precisión comparable. Su exactitud mejora, como en todos los métodos numéricos, cuando se subdivide el intervalo en segmentos más pequeños.
+
+Este método también se usa como complemento en bibliotecas de software científico y paquetes de análisis numérico, siendo útil tanto en la academia como en la industria, especialmente cuando se requiere alta fidelidad en la estimación de áreas bajo curvas o acumulación de cantidades físicas modeladas mediante funciones complejas.
+
+Resumen General
+Los métodos de integración numérica son fundamentales cuando se necesita calcular el valor aproximado de una integral definida y no se puede hacer mediante técnicas analíticas. Cada uno de los métodos descritos tiene sus propias características, ventajas y limitaciones, y la elección del método adecuado depende del tipo de función, el nivel de precisión requerido y la complejidad del problema. En campos como la ingeniería, física computacional, simulación numérica, análisis de datos y finanzas computacionales, estos métodos son herramientas esenciales para el trabajo diario con modelos matemáticos.
