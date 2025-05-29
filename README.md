@@ -21,7 +21,7 @@ Son técnicas utilizadas en el análisis de datos y en la matemática aplicada p
 La solución de ecuaciones diferenciales en métodos numéricos se refiere a la implementación de técnicas computacionales para encontrar soluciones aproximadas a ecuaciones diferenciales, ya sean ordinarias o parciales, cuando no es posible obtener una solución analítica cerrada.
 ## Indice
 
-### Tema 1
+### Tema 1 Introducción MN
 
   - [Apuntes](https://github.com/lilluis19/Metodos_Numericos/tree/master/Tema1/Apuntes)
     
@@ -37,7 +37,7 @@ La solución de ecuaciones diferenciales en métodos numéricos se refiere a la 
 
   - [Error relativo](https://github.com/lilluis19/Metodos_Numericos/tree/master/Tema1/Error%20num%C3%A9rico%20total)
 
-## Tema 2
+## Tema 2 - Métodos de Solución de Ecuaciones
 
  - [Apuntes](https://github.com/lilluis19/Metodos_Numericos/tree/master/Tema2/Apuntes)
 
@@ -49,7 +49,7 @@ La solución de ecuaciones diferenciales en métodos numéricos se refiere a la 
 
  - [Metodo de falsa posición](https://github.com/lilluis19/Metodos_Numericos/tree/master/Tema2/M%C3%A9todo%20de%20falsa%20posici%C3%B3n)
 
-## Tema 3
+## Tema 3 - Métodos de solución de Sistemas de sistemas de ecuaciones
 
  - [Apuntes](https://github.com/lilluis19/Metodos_Numericos/tree/master/Tema3/Apuntes)}
 
@@ -61,7 +61,7 @@ La solución de ecuaciones diferenciales en métodos numéricos se refiere a la 
 
  - [Metodo de jacobi](https://github.com/lilluis19/Metodos_Numericos/tree/master/Tema3/M%C3%A9todo%20de%20Gauss-Seidel)
 
- ## Tema 4
+ ## Tema 4 - Diferenciación e integración numérica
  
  - [Apuntes](https://github.com/lilluis19/Metodos_Numericos/tree/master/Tema4/Apuntes)
 
@@ -73,7 +73,7 @@ La solución de ecuaciones diferenciales en métodos numéricos se refiere a la 
 
  - [Metodo regla simpsson 3_8](https://github.com/lilluis19/Metodos_Numericos/tree/master/Tema4/MetodoReglaSimpson3_8)
 
-## Tema 5
+## TEMA 5 - Interpolación y ajuste de funciones
 
  - [Apuntes](https://github.com/lilluis19/Metodos_Numericos/tree/master/Tema5/Apuntes)
 
@@ -89,7 +89,7 @@ La solución de ecuaciones diferenciales en métodos numéricos se refiere a la 
 
  -  [Metodo de regresión](https://github.com/lilluis19/Metodos_Numericos/tree/master/Tema5/M%C3%A9todo_de_regresion)
 
-## Tema 6
+## Tema 6 - Solución de ecuaciones diferenciales
 
  - [Apuntes](https://github.com/lilluis19/Metodos_Numericos/tree/master/Tema6/Apuntes)
 
