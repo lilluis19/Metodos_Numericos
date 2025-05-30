@@ -15,7 +15,7 @@ Definición:
 
 Pseudocódigo:
 
-´´´
+```
 Entradas:
   valor_verdadero
   valor_aproximado
@@ -25,7 +25,7 @@ Proceso:
   ER ← EA / |valor_verdadero|
 
 Fin
-´´´
+```
 
 ------------------------------------------------------------
 2. Error de Redondeo
@@ -35,7 +35,7 @@ Definición:
 
 Pseudocódigo:
 
-´´´
+```
 Entradas:
   número
   cifras_significativas
@@ -44,7 +44,7 @@ Proceso:
   Resultado ← redondear(número, cifras_significativas)
 
 Fin
-´´´
+```
 
 ------------------------------------------------------------
 3. Error de Truncamiento
@@ -54,7 +54,7 @@ Definición:
 
 Pseudocódigo:
 
-´´´
+```
 Entradas:
   serie
   n_términos
@@ -63,7 +63,7 @@ Proceso:
   Resultado ← suma de los primeros n_términos de la serie
 
 Fin
-´´´
+```
 
 ------------------------------------------------------------
 4. Propagación del Error
@@ -73,7 +73,7 @@ Definición:
 
 Pseudocódigo:
 
-´´´
+```
 Entradas:
   errores en datos de entrada
   operaciones a realizar
@@ -82,7 +82,7 @@ Proceso:
   Resultado ← calcular error resultante combinando errores individuales según las operaciones
 
 Fin
-´´´
+```
 
 ------------------------------------------------------------
 5. Error de Formulación
@@ -92,7 +92,7 @@ Definición:
 
 Pseudocódigo:
 
-´´´
+```
 Entradas:
   modelo_real
   modelo_aproximado
@@ -102,7 +102,7 @@ Proceso:
   Evaluar desviación o imprecisión
 
 Fin
-´´´
+```
 
 ------------------------------------------------------------
 6. Incertidumbre en los Datos
@@ -112,7 +112,7 @@ Definición:
 
 Pseudocódigo:
 
-´´´
+```
 Entradas:
   valor_medido
   precisión_instrumento
@@ -121,4 +121,4 @@ Proceso:
   Incertidumbre ← ± precisión_instrumento
 
 Fin
-´´´
+```
