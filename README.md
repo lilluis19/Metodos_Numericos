@@ -20,7 +20,7 @@ Son técnicas utilizadas en el análisis de datos y en la matemática aplicada p
 
 ## Solución de Ecuaciones Diferenciales
 La solución de ecuaciones diferenciales en métodos numéricos se refiere a la implementación de técnicas computacionales para encontrar soluciones aproximadas a ecuaciones diferenciales, ya sean ordinarias o parciales, cuando no es posible obtener una solución analítica cerrada.
-## Indice
+## Índice
 
 ### Tema 1 Introducción Métodos numericos
 
