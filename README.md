@@ -1,9 +1,10 @@
-# Metodos Numericos
+# Métodos Numéricos
 
-En este repositorio el objetivo es recopilar la mayor parte de informacion acerca de la materia de metodos numericos, en donde podremos encontrar desde informacion general de cada tema de esta materia, hasta los diferentes algoritmos y metodos que podemos encontrar e implementar a lo largo de los 6 temas en la materia de metodos numericos
+En este repositorio se presenta una recopilación completa y organizada del contenido esencial de la materia de Métodos Numéricos. El objetivo es ofrecer un recurso accesible y útil que abarque tanto fundamentos teóricos como implementaciones prácticas. Aquí encontrarás desde explicaciones generales hasta los algoritmos y métodos más relevantes, distribuidos a lo largo de los seis temas principales del curso. Este repositorio está diseñado para servir como herramienta de estudio, consulta y desarrollo académico.
 
-## Introduccion a Metodos Numericos
-Los métodos numéricos son técnicas matemáticas que se utilizan para resolver problemas matemáticos mediante aproximaciones numéricas en lugar de soluciones exactas. Estos métodos son especialmente útiles cuando las soluciones analíticas no son posibles o son demasiado complejas. Algunos ejemplos de métodos numéricos son el método de Newton-Raphson, el método de la secante, el método de Euler para ecuaciones diferenciales, entre otros. Estos métodos se aplican en diversas áreas como la ingeniería, la física, la economía y la informática para resolver problemas que involucran cálculos numéricos.
+## Introducción a Métodos Numéricos
+
+Los métodos numéricos son técnicas matemáticas utilizadas para resolver problemas mediante aproximaciones numéricas en lugar de soluciones exactas. Son especialmente útiles cuando las soluciones analíticas son difíciles o imposibles de obtener. Algunos ejemplos son el método de Newton-Raphson, el método de la secante y el método de Euler. Estas técnicas se aplican ampliamente en ingeniería, física, economía, informática, entre otras disciplinas, para resolver problemas que requieren cálculos numéricos precisos.
 
 ## Métodos de Solución de Ecuaciones
 Los métodos de solución de ecuaciones son técnicas utilizadas para encontrar los valores de las variables que satisfacen una ecuación dada. Dependiendo del tipo de ecuación, se pueden utilizar diferentes métodos.
